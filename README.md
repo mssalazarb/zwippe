@@ -33,7 +33,6 @@ $ npm run test:e2e
 # test coverage
 $ npm run test:cov
 ```
-## Postman Collection
 
 # Zwippe postman collection
 [Postman](docs/Zwippe.postman_collection.json)
