@@ -1,0 +1,19 @@
+version: '3'
+services:
+  test:
+    build:
+      context: .
+      dockerfile: test.Dockerfile
+    volumes:
+      - .:/ws
+    working_dir: /ws${WORKSPACE_PATH:-/}
+    user: ${MY_USER:-root}
+    environment:
+      NODE_ENV: 'testing'
+      TRUEQQE_API_KEY: '922ddfq1h989nx21j012j012'
+      PORT: 8080
+      PREFIX: 'api/trueqqe-jobs'
+    command: >
+      sh -c "
+        npm run test
+        "
