@@ -12,7 +12,6 @@ RUN mkdir -p /usr/src/app
 # Set the work directory
 WORKDIR /usr/src/app
 # Bundle app source
-
 COPY . /usr/src/app
 # Bundle app source
 COPY --from=intermediate ./node_modules ./node_modules
